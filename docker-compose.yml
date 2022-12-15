@@ -1,0 +1,10 @@
+version: '3.4'
+
+services:
+  demoapp:
+    image: ${DOCKER_REGISTRY-}demoapp
+    build:
+      context: .
+      dockerfile: DemoApp/Dockerfile
+    ports:
+    - "8000:80"
